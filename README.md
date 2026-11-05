@@ -13,3 +13,4 @@ Website peminjaman peralatan kelas (HTML, CSS, JavaScript).
 
 ## Foto barang
 Letakkan foto di folder `images/` dan samakan nama filenya dengan field `img` di `common.js`.
+images/Proyektor Epson EB-X06.jpg
