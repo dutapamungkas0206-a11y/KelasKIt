@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KelasKit — Pinjam peralatan kelas jadi lebih mudah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#beranda" class="logo">
+      <span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>
+      Kelas<span>Kit</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="#beranda" class="is-active">Beranda</a>
+      <a href="katalog.html">Katalog Barang</a>
+      <a href="cara-meminjam.html">Cara Meminjam</a>
+      <a href="bantuan.html">Bantuan</a>
+      <a href="masuk.html" class="nav__login" id="navLogin">Masuk</a>
+      <a href="daftar.html" class="btn btn--primary" id="navRegister">Daftar Sekarang</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="beranda">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <span class="pill">Solusi praktis untuk kebutuhan kelas</span>
+        <h1>Pinjam peralatan kelas jadi <em>lebih mudah.</em></h1>
+        <p class="hero__lead">Temukan dan pinjam perlengkapan belajar yang kamu butuhkan. Cepat, transparan, dan tanpa proses yang rumit.</p>
+
+        <form class="search" id="searchForm" role="search">
+          <svg viewBox="0 0 24 24" class="search__icon"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="searchInput" placeholder="Cari proyektor, laptop, kamera..." aria-label="Cari barang">
+          <button type="submit" class="btn btn--primary">Cari Barang</button>
+          <div class="suggest" id="suggest" hidden></div>
+        </form>
+        <p class="popular">Pencarian populer:
+          <button type="button" data-q="Proyektor">Proyektor</button>
+          <button type="button" data-q="Laptop">Laptop</button>
+          <button type="button" data-q="Kamera">Kamera</button>
+        </p>
+
+        <ul class="perks">
+          <li><span class="perks__icon"><svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg></span><div><strong>100% Gratis</strong><small>untuk siswa</small></div></li>
+          <li><span class="perks__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><strong>Proses cepat</strong><small>dan terpantau</small></div></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="blob blob--1"></div><div class="blob blob--2"></div>
+        <div class="showcase">
+          <small>Inventaris hari ini</small>
+          <h3>Peralatan Kelas</h3>
+          <div class="showcase__img">
+            <img src="images/proyektor-epson.jpg" alt="Proyektor Epson">
+          </div>
+          <div class="showcase__row">
+            <div><strong>Proyektor Epson</strong><small>Ruang Multimedia</small></div>
+            <span class="tag tag--ok"><i></i>4 tersedia</span>
+          </div>
+          <div class="days"><span>Sen</span><span class="on">Sel</span><span class="on">Rab</span><span>Kam</span><span class="on">Jum</span></div>
+        </div>
+        <div class="float float--status"><span class="float__icon"><svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg></span><div><small>Status</small><strong>Siap dipinjam</strong></div></div>
+        <div class="float float--users"><span class="float__icon float__icon--blue"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-4 3-6 6.5-6s6 2 6.5 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .7 3.2 2.6 3.5 6"/></svg></span><div><strong>1.200+</strong><small>peminjam aktif</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container stats__grid">
+      <div><b>48+</b><span>Barang tersedia</span></div>
+      <div><b>1.2K</b><span>Peminjaman berhasil</span></div>
+      <div><b>98%</b><span>Pengembalian tepat waktu</span></div>
+      <div><b>4.9/5</b><span>Kepuasan pengguna</span></div>
+    </div>
+  </section>
+
+  <section class="catalog" id="katalog">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Jelajahi inventaris</span>
+          <h2>Temukan barang yang kamu butuhkan</h2>
+        </div>
+        <p>Pilih dari berbagai kategori perlengkapan kelas yang tersedia.</p>
+      </div>
+
+      <div class="chips" id="chips" role="tablist"></div>
+
+      <div class="list-head">
+        <h3 id="listTitle">Sering dipinjam</h3>
+        <a href="katalog.html" class="link" id="seeAll">Lihat semua <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>Barang tidak ditemukan. Coba kata kunci atau kategori lain.</p>
+    </div>
+  </section>
+
+  <section class="steps" id="cara">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Mudah dan cepat</span>
+        <h2>Pinjam dalam tiga langkah</h2>
+        <p>Tak perlu antre dan mengisi formulir kertas. Semua proses bisa dilakukan secara online.</p>
+      </div>
+      <div class="steps__grid">
+        <article class="step"><span class="step__no">01</span><span class="step__icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><h3>Pilih barang</h3><p>Cari peralatan yang kamu butuhkan dan cek ketersediaannya.</p></article>
+        <article class="step"><span class="step__no">02</span><span class="step__icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><h3>Tentukan jadwal</h3><p>Pilih tanggal pinjam dan tanggal pengembalian barang.</p></article>
+        <article class="step"><span class="step__no">03</span><span class="step__icon"><svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg></span><h3>Ajukan peminjaman</h3><p>Kirim permintaan dan tunggu persetujuan pengelola.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-wrap" id="daftar">
+    <div class="container">
+      <div class="cta">
+        <span class="cta__icon"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Zm-3 9 2.5 2.5L15.5 10"/></svg></span>
+        <div class="cta__text"><h2>Siap mulai meminjam?</h2><p>Daftar sekarang dan dapatkan akses ke seluruh inventaris kelas.</p></div>
+        <a href="daftar.html" class="btn btn--white">Buat Akun Gratis <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="bantuan">
+  <div class="container footer__inner">
+    <a href="#beranda" class="logo logo--sm">
+      <span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>
+      Kelas<span>Kit</span>
+    </a>
+    <p>Platform peminjaman barang untuk aktivitas belajar yang lebih mudah.</p>
+    <small>&copy; <span id="year">2025</span> KelasKit. Semua hak dilindungi.</small>
+  </div>
+</footer>
+
+<script src="common.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

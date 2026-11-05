@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bantuan | KelasKit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="index.html">Beranda</a>
+      <a href="katalog.html">Katalog Barang</a>
+      <a href="cara-meminjam.html">Cara Meminjam</a>
+      <a href="bantuan.html" class="is-active">Bantuan</a>
+      <a href="masuk.html" class="nav__login" id="navLogin">Masuk</a>
+      <a href="daftar.html" class="btn btn--primary" id="navRegister">Daftar Sekarang</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Pusat bantuan</span>
+      <h1>Ada yang bisa kami bantu?</h1>
+      <p>Cari jawaban di pertanyaan umum, atau hubungi pengelola kalau belum ketemu.</p>
+      <form class="search" id="faqSearchForm" role="search">
+        <svg viewBox="0 0 24 24" class="search__icon"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="faqSearch" placeholder="Cari pertanyaan, misalnya: perpanjang" aria-label="Cari pertanyaan" autocomplete="off">
+      </form>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container faq__inner">
+      <div id="faqList">
+        <details open><summary>Apakah meminjam di KelasKit berbayar?</summary><p>Tidak. Layanan ini gratis untuk siswa.</p></details>
+        <details><summary>Bagaimana cara membuat akun?</summary><p>Klik Daftar Sekarang, isi nama, email, kelas, dan kata sandi, lalu setujui syarat peminjaman.</p></details>
+        <details><summary>Saya lupa kata sandi. Apa yang harus dilakukan?</summary><p>Hubungi pengelola lewat bagian Kontak di bawah, sebutkan email akunmu, dan mereka akan membantu mengatur ulang.</p></details>
+        <details><summary>Berapa lama pengajuan disetujui?</summary><p>Pengelola memproses pengajuan pada jam operasional. Ajukan lebih awal supaya jadwalmu aman.</p></details>
+        <details><summary>Bisakah saya memperpanjang masa pinjam?</summary><p>Bisa, selama barang tidak sedang dipesan orang lain. Ajukan perpanjangan sebelum tanggal kembali lewat.</p></details>
+        <details><summary>Barang yang saya mau sedang dipinjam. Apa yang harus dilakukan?</summary><p>Pilih tanggal lain, atau cek barang serupa di katalog. Aktifkan filter Hanya yang tersedia untuk melihat barang yang siap dipinjam.</p></details>
+        <details><summary>Barang rusak saat saya pakai. Bagaimana?</summary><p>Segera lapor ke pengelola dan jangan memperbaikinya sendiri. Pengelola akan memberi tahu langkah selanjutnya.</p></details>
+        <details><summary>Berapa lama saya boleh meminjam?</summary><p>Batasnya berbeda tiap barang dan tertera di kartu barang, misalnya Maks. 3 hari.</p></details>
+      </div>
+      <p class="empty" id="faqEmpty" hidden>Tidak ada pertanyaan yang cocok. Coba kata lain, atau tanyakan langsung lewat form di bawah.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="kontak">
+    <div class="container">
+      <div class="section-head section-head--center"><span class="eyebrow">Kontak</span><h2>Masih butuh bantuan?</h2></div>
+      <div class="contact__grid">
+        <div class="contact__card"><h3>Email</h3><p>bantuan@kelaskit.example</p></div>
+        <div class="contact__card"><h3>WhatsApp</h3><p>+62 812-0000-0000</p></div>
+        <div class="contact__card"><h3>Ruang pengelola</h3><p>Ruang Multimedia, Senin&ndash;Jumat</p></div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="row2">
+          <div class="field"><label for="cname">Nama</label><input id="cname" name="cname" autocomplete="name"><small class="err" data-for="cname"></small></div>
+          <div class="field"><label for="cemail">Email</label><input id="cemail" name="cemail" type="email" autocomplete="email"><small class="err" data-for="cemail"></small></div>
+        </div>
+        <div class="field"><label for="cmsg">Pesan</label><textarea id="cmsg" name="cmsg" rows="4" placeholder="Tulis pertanyaan atau kendalamu"></textarea><small class="err" data-for="cmsg"></small></div>
+        <p class="form-msg" id="contactMsg" role="alert"></p>
+        <button type="submit" class="btn btn--primary">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="index.html" class="logo logo--sm"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <p>Platform peminjaman barang untuk aktivitas belajar yang lebih mudah.</p>
+    <small>&copy; <span id="year">2025</span> KelasKit. Semua hak dilindungi.</small>
+  </div>
+</footer>
+<script src="common.js"></script><script src="bantuan.js"></script>
+</body></html>

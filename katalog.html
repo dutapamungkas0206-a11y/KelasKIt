@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog Barang | KelasKit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="index.html">Beranda</a>
+      <a href="katalog.html" class="is-active">Katalog Barang</a>
+      <a href="cara-meminjam.html" >Cara Meminjam</a>
+      <a href="bantuan.html">Bantuan</a>
+      <a href="masuk.html" class="nav__login" id="navLogin">Masuk</a>
+      <a href="daftar.html" class="btn btn--primary" id="navRegister">Daftar Sekarang</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Katalog barang</span>
+      <h1>Cari peralatan kelas</h1>
+      <p>Ketik nama barang atau pilih kategori. Stok diperbarui setiap ada peminjaman.</p>
+      <form class="search" id="searchForm" role="search">
+        <svg viewBox="0 0 24 24" class="search__icon"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="searchInput" placeholder="Cari proyektor, laptop, kamera..." aria-label="Cari barang" autocomplete="off">
+        <button type="submit" class="btn btn--primary">Cari Barang</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="catalog catalog--page">
+    <div class="container">
+      <div class="chips" id="chips" role="tablist"></div>
+      <div class="toolbar">
+        <p id="count" aria-live="polite"></p>
+        <label class="check"><input type="checkbox" id="onlyAvail"> Hanya yang tersedia</label>
+        <label class="select">Urutkan
+          <select id="sort">
+            <option value="nama">Nama A&ndash;Z</option>
+            <option value="stok">Stok terbanyak</option>
+            <option value="durasi">Durasi terlama</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <p>Barang tidak ditemukan. Coba kata kunci lain atau atur ulang filter.</p>
+        <button type="button" class="btn btn--primary" id="reset">Atur ulang filter</button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="index.html" class="logo logo--sm"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <p>Platform peminjaman barang untuk aktivitas belajar yang lebih mudah.</p>
+    <small>&copy; <span id="year">2025</span> KelasKit. Semua hak dilindungi.</small>
+  </div>
+</footer>
+<script src="common.js"></script>
+<script src="katalog.js"></script>
+</body></html>

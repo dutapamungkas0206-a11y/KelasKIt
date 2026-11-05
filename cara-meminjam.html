@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cara Meminjam | KelasKit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="index.html">Beranda</a>
+      <a href="katalog.html" >Katalog Barang</a>
+      <a href="cara-meminjam.html" class="is-active">Cara Meminjam</a>
+      <a href="bantuan.html">Bantuan</a>
+      <a href="masuk.html" class="nav__login" id="navLogin">Masuk</a>
+      <a href="daftar.html" class="btn btn--primary" id="navRegister">Daftar Sekarang</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Tata cara peminjaman</span>
+      <h1>Cara meminjam peralatan kelas</h1>
+      <p>Semua proses dilakukan online. Ikuti lima langkah berikut, dari mendaftar sampai mengembalikan barang.</p>
+    </div>
+  </section>
+
+  <section class="guide">
+    <div class="container">
+      <ol class="timeline">
+        <li><span class="timeline__no">1</span><div><h3>Buat akun dan masuk</h3><p>Daftar memakai data kelas kamu, lalu masuk. Hanya akun aktif yang bisa mengajukan peminjaman.</p></div></li>
+        <li><span class="timeline__no">2</span><div><h3>Pilih barang</h3><p>Buka <a href="katalog.html">Katalog Barang</a>, cari peralatan yang dibutuhkan, lalu cek stok dan batas lama pinjam di setiap kartu.</p></div></li>
+        <li><span class="timeline__no">3</span><div><h3>Tentukan jadwal dan ajukan</h3><p>Klik Lihat Detail, isi tanggal pinjam, tanggal kembali, jumlah unit, dan keperluan. Lama pinjam tidak boleh melebihi batas barang.</p></div></li>
+        <li><span class="timeline__no">4</span><div><h3>Tunggu persetujuan pengelola</h3><p>Pengelola memeriksa pengajuanmu. Kalau disetujui, kamu bisa mengambil barang sesuai jadwal.</p></div></li>
+        <li><span class="timeline__no">5</span><div><h3>Ambil dan kembalikan tepat waktu</h3><p>Cek kondisi barang saat menerima. Kembalikan di tanggal yang sudah dipilih dalam kondisi baik, agar teman lain bisa memakainya.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="rules">
+    <div class="container rules__grid">
+      <div class="rule">
+        <h2>Syarat peminjam</h2>
+        <ul>
+          <li>Siswa atau guru yang terdaftar dan memiliki akun aktif.</li>
+          <li>Peminjaman untuk kegiatan belajar di kelas atau sekolah.</li>
+          <li>Pengajuan dikirim sebelum tanggal pinjam, bukan di hari yang sama.</li>
+          <li>Peminjam bertanggung jawab atas barang selama masa pinjam.</li>
+        </ul>
+      </div>
+      <div class="rule">
+        <h2>Ketentuan barang</h2>
+        <ul>
+          <li>Lama pinjam mengikuti batas yang tertera di tiap barang.</li>
+          <li>Periksa kondisi barang saat serah terima dan saat pengembalian.</li>
+          <li>Laporkan kerusakan atau kehilangan ke pengelola secepatnya.</li>
+          <li>Barang tidak boleh dipindahtangankan ke orang lain.</li>
+          <li>Keterlambatan dapat memengaruhi pengajuan berikutnya.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container faq__inner">
+      <div class="section-head section-head--center"><span class="eyebrow">Bantuan</span><h2>Pertanyaan yang sering diajukan</h2></div>
+      <details open><summary>Apakah meminjam di KelasKit berbayar?</summary><p>Tidak. Layanan ini gratis untuk siswa.</p></details>
+      <details><summary>Berapa lama pengajuan disetujui?</summary><p>Pengelola memproses pengajuan pada jam operasional. Ajukan lebih awal supaya jadwalmu aman.</p></details>
+      <details><summary>Bisakah saya memperpanjang masa pinjam?</summary><p>Bisa, selama barang tidak sedang dipesan orang lain. Ajukan perpanjangan sebelum tanggal kembali lewat.</p></details>
+      <details><summary>Barang yang saya mau sedang dipinjam. Apa yang harus dilakukan?</summary><p>Pilih tanggal lain, atau cek barang serupa di katalog. Aktifkan filter Hanya yang tersedia untuk melihat barang yang siap dipinjam.</p></details>
+      <details><summary>Barang rusak saat saya pakai. Bagaimana?</summary><p>Segera lapor ke pengelola dan jangan memperbaikinya sendiri. Pengelola akan memberi tahu langkah selanjutnya.</p></details>
+    </div>
+  </section>
+
+  <section class="cta-wrap">
+    <div class="container">
+      <div class="cta">
+        <span class="cta__icon"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Zm-3 9 2.5 2.5L15.5 10"/></svg></span>
+        <div class="cta__text"><h2>Siap mulai meminjam?</h2><p>Pilih barang yang kamu butuhkan dan ajukan sekarang.</p></div>
+        <a href="katalog.html" class="btn btn--white">Buka Katalog <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="index.html" class="logo logo--sm"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <p>Platform peminjaman barang untuk aktivitas belajar yang lebih mudah.</p>
+    <small>&copy; <span id="year">2025</span> KelasKit. Semua hak dilindungi.</small>
+  </div>
+</footer>
+<script src="common.js"></script>
+</body></html>

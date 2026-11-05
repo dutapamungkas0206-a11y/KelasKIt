@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pengajuan Saya | KelasKit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="index.html">Beranda</a>
+      <a href="katalog.html">Katalog Barang</a>
+      <a href="cara-meminjam.html">Cara Meminjam</a>
+      <a href="bantuan.html">Bantuan</a>
+      <a href="masuk.html" class="nav__login" id="navLogin">Masuk</a>
+      <a href="daftar.html" class="btn btn--primary" id="navRegister">Daftar Sekarang</a>
+    </nav>
+  </div>
+</header>
+
+<main class="mine">
+  <div class="container">
+    <span class="eyebrow">Pengajuan saya</span>
+    <h1>Status peminjaman</h1>
+    <p class="mine__lead" id="lead">Pantau pengajuanmu di sini. Pembaruan dari pengelola akan muncul sebagai notifikasi.</p>
+    <div class="loan-list" id="loanList"></div>
+    <div class="empty" id="empty" hidden></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="index.html" class="logo logo--sm">Kelas<span>Kit</span></a>
+    <p>Platform peminjaman barang untuk aktivitas belajar yang lebih mudah.</p>
+    <small>&copy; <span id="year">2025</span> KelasKit. Semua hak dilindungi.</small>
+  </div>
+</footer>
+<script src="common.js"></script>
+<script src="pengajuan.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel Admin | KelasKit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo"><span class="logo__mark"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 9L4 7.5M12 12l8-4.5M12 12v9"/></svg></span>Kelas<span>Kit</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="index.html">Beranda</a>
+      <a href="katalog.html">Katalog Barang</a>
+      <a href="cara-meminjam.html">Cara Meminjam</a>
+      <a href="bantuan.html">Bantuan</a>
+      <a href="masuk.html" class="nav__login is-active" id="navLogin">Masuk</a>
+      <a href="daftar.html" class="btn btn--primary" id="navRegister">Daftar Sekarang</a>
+    </nav>
+  </div>
+</header>
+
+<main class="admin" id="adminMain" hidden>
+  <div class="container">
+    <div class="admin__head">
+      <div>
+        <span class="eyebrow">Panel admin</span>
+        <h1>Persetujuan peminjaman</h1>
+        <p>Periksa pengajuan siswa, setujui atau tolak, lalu catat saat barang dikembalikan.</p>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn btn--ghost" id="seedBtn">Isi data contoh</button>
+        <button type="button" class="btn btn--ghost" id="clearBtn">Hapus semua pengajuan</button>
+      </div>
+    </div>
+
+    <div class="stat-grid" id="stats"></div>
+
+    <h2 class="admin__h2">Pengajuan</h2>
+    <div class="chips" id="statusChips" role="tablist"></div>
+    <p class="form-msg" id="adminMsg" role="alert"></p>
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th>Peminjam</th><th>Barang</th><th>Jadwal</th><th>Keperluan</th><th>Status</th><th>Aksi</th></tr></thead>
+        <tbody id="loanRows"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="loanEmpty" hidden>Belum ada pengajuan pada status ini.</p>
+
+    <h2 class="admin__h2">Inventaris</h2>
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th>Barang</th><th>Kategori</th><th>Stok total</th><th>Sedang dipinjam</th><th>Tersedia</th></tr></thead>
+        <tbody id="invRows"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<main class="denied" id="denied" hidden>
+  <div class="container">
+    <h1>Halaman khusus admin</h1>
+    <p>Masuk dengan akun admin untuk membuka panel ini.</p>
+    <a class="btn btn--primary" href="masuk.html">Masuk</a>
+  </div>
+</main>
+
+<dialog class="modal" id="rejectDlg">
+  <form class="modal__box" id="rejectForm">
+    <h3>Tolak pengajuan</h3>
+    <p class="modal__meta" id="rejectInfo"></p>
+    <div class="field"><label for="reason">Alasan penolakan</label><textarea id="reason" rows="3" placeholder="Contoh: barang sedang dipakai untuk ujian"></textarea></div>
+    <div class="actions">
+      <button type="submit" class="btn btn--primary">Tolak Pengajuan</button>
+      <button type="button" class="btn btn--ghost" id="rejectCancel">Batal</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
